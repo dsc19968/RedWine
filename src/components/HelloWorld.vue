@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello" style="padding-bottom: 60px;">
   	<div class="top">
 			<mt-search
 			  v-model="value"
@@ -70,13 +70,13 @@
   				<del>￥58.00</del>
   			</li>
   			<li>
-  				<div><img src="http://img0.gjw.com/appimage/201706/23/201706230951251318_mid.jpg"/></div>
+  				<div><img src="http://img0.gjw.com/appImage/201612/02/20161221622270_all.jpg"/></div>
   				<p>西班牙 法比纳 马标一号 干红葡萄酒 750ml</p>
   				<strong>￥35.5</strong>
   				<del>￥58.00</del>
   			</li>
   			<li>
-  				<div><img src="http://img0.gjw.com/appimage/201706/23/201706230951251318_mid.jpg"/></div>
+  				<div><img src="http://img0.gjw.com/appcomimage/201701/03/201701031333292758_mid.jpg"/></div>
   				<p>西班牙 法比纳 马标一号 干红葡萄酒 750ml</p>
   				<strong>￥35.5</strong>
   				<del>￥58.00</del>
@@ -87,8 +87,108 @@
   	<div class="banner">
   	<img src="http://img0.gjw.com/appimage/201801/19/201801191617510412.jpg"/>
   	</div>
+	<!--floor-->
+	<div class="floor">
+		<div class="floor-top">
+			<h3>
+				<img src="http://img0.gjw.com/appcomimage/201612/19/201612191547333154.jpg"/>
+			</h3>
+		</div>
+		<div class="floor_1">
+			<div><img src="http://img0.gjw.com/appimage/201801/29/201801291044252236.jpg"/></div>
+			<div><img src="http://img0.gjw.com/appimage/201801/29/201801290959378242.jpg"/></div>
+			<div><img src="http://img0.gjw.com/appimage/201801/29/201801291044566738.jpg"/></div>
+			<div><img src="http://img0.gjw.com/appimage/201801/29/201801291045190615.jpg"/></div>
+			<div><img src="http://img0.gjw.com/appimage/201801/29/201801290959552841.jpg"/></div>
+		</div>
+	</div>
+	<!--floor_2-->
+	<div class="floor">
+		<div class="floor-top">
+			<h3>
+				<img src="http://img0.gjw.com/appcomimage/201612/19/201612191547559065.jpg"/>
+			</h3>
+		</div>
+		<div class="floor_2-footer">
+			<div>
+				<img src="http://img0.gjw.com/appimage/201801/29/201801291045447539.jpg"/>
+			</div>
+			<div>
+				<div>
+					<img src="http://img0.gjw.com/appimage/201801/29/201801291045569404.jpg"/>
+				</div>
+				<div><img src="http://img0.gjw.com/appimage/201801/29/201801291046099199.jpg"/></div>
+				<div><img src="http://img0.gjw.com/appimage/201801/29/201801291046225361.jpg"/></div>
+			</div>
+		</div>
+	</div>
 
-    <!-- footer -->
+    <!--adv-->
+		<div class="adv"><img src="http://img0.gjw.com/appimage/201801/29/201801291013434599.jpg"/>
+		</div>
+	<!--floor_2-->
+	<div class="floor">
+		<div class="floor-top">
+			<h3>
+				<img src="http://img0.gjw.com/appcomimage/201612/19/201612191638519607.jpg"/>
+			</h3>
+		</div>
+		<div class="floor_2-footer">
+			<div>
+				<img src="http://img0.gjw.com/appimage/201801/29/201801291000219443.jpg"/>
+			</div>
+			<div>
+				<div>
+					<img src="http://img0.gjw.com/appimage/201801/29/201801291003477207.jpg"/>
+				</div>
+				<div><img src="http://img0.gjw.com/appimage/201801/29/201801291005544013.jpg"/></div>
+				<div><img src="http://img0.gjw.com/appimage/201801/29/201801291007576904.jpg"/></div>
+			</div>
+		</div>
+	</div>
+	<!--floor_2-->
+	<div class="floor">
+		<div class="floor-top">
+			<h3>
+				<img src="http://img0.gjw.com/appcomimage/201612/19/201612191702066438.jpg"/>
+			</h3>
+		</div>
+		<div class="floor_2-footer">
+			<div>
+				<img src="http://img0.gjw.com/appimage/201801/29/201801291008337421.jpg"/>
+			</div>
+			<div>
+				<div>
+					<img src="http://img0.gjw.com/appimage/201801/29/201801291010324336.jpg"/>
+				</div>
+				<div><img src="http://img0.gjw.com/appimage/201801/29/201801291012012695.jpg"/></div>
+				<div><img src="http://img0.gjw.com/appimage/201801/29/201801291013074628.jpg"/></div>
+			</div>
+		</div>
+	</div>
+	<!--floor-5-->
+	<div class="floor-5">
+		<div>
+			<h3><img src="http://img0.gjw.com/appcomimage/201612/19/201612191705164500.jpg"/></h3>
+		</div>
+		<!--5lou-->
+		<ul class="twoColumn">
+			<li v-for="item in info">
+				<div class="picWrapper">
+					<img :src="'http://img0.gjw.com' + item.图片路径"/>
+				</div>
+				<p class="twoColumn_txt">{{item.品名}}</p>
+				<div class="discount">
+					<i>{{item.优惠条件}}</i>
+				</div>
+				<div class="price">
+					<strong>￥<i>{{item.本站价}}</i></strong>
+					<del>￥<i>{{item.市场价}}</i></del>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- footer -->
     <common_footer></common_footer>
   </div>
 </template>
@@ -105,7 +205,9 @@ export default {
       	"http://img0.gjw.com/appimage/201801/19/201801190955471701.jpg",
       ],
       value:"茅台",
-      fastKill:[]
+      fastKill:[],
+      info:[],
+      page:0
     }
   },
   mounted(){
@@ -120,7 +222,44 @@ export default {
 //				console.log(res.data.info);
 //				this.fastKill = res.data;
 //			})
-  }
+//获取5楼数据
+//		axios.get('SER/GetHot?_index=1')
+//				.then((res)=>{
+//					console.log(res.data.info)
+//					this.info = JSON.parse(res.data.info);
+//		
+//				})
+		this.getData();
+		this.loadMore();
+	},
+	methods:{
+		getData(){
+			axios.get(`SER/GetHot?_index=${this.page + 1}`)
+			.then((res)=>{
+				if(res.data.state == 0){
+					return;
+				}
+//				console.log(res.data.info)
+				var string = res.data.info;
+				this.page++;
+				var oData = JSON.parse(string);
+				// console.log(oData)
+				this.info = this.info.concat(oData);
+			})
+		},
+		loadMore(){
+			var that = this;
+			let clientHeight = document.documentElement.clientHeight;
+			document.onscroll = function(){
+				let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+//				document.title = document.body.scrollHeight + ":" + (scrollTop + clientHeight);
+				if((scrollTop + clientHeight) >= document.body.scrollHeight * 0.8){
+					that.getData();
+//					console.log(that);
+				}
+			}
+		}
+	}
 }
 </script>
 
@@ -234,5 +373,106 @@ img{
 }
 .mint-search{
   height:0.44rem;
+}
+/*---------floor-------------*/
+.floor{
+	width: 100%;
+	height: 2.17rem;
+}
+.floor-top{
+	width: 100%;
+	height: 0.57rem;
+	padding: 1px;
+}
+.floor div:nth-child(2){
+	width: 100%;
+	height: 1.6rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+.floor_1 div:nth-child(1), .floor_1 div:nth-child(2){
+	width: 1.6rem;
+	height: 0.8rem;
+	padding: 1px;
+}
+.floor_1 div:nth-child(3),.floor_1 div:nth-child(4),.floor_1 div:nth-child(5){
+	width: 1.06rem;
+	height: 0.79rem;
+	padding: 1px;
+}
+/*----floor_2----------*/
+.floor_2-footer{
+
+}
+.floor_2-footer>div:nth-child(1){
+	width: 1.28rem;
+	height: 1.6rem;
+	padding: 1px;
+	
+}
+.floor_2-footer>div:nth-child(2){
+	width: 1.92rem;
+	height: 1.6rem;
+}
+.floor_2-footer>div:nth-child(2) div:nth-of-type(1){
+	width: 1.92rem;
+	height: 0.8rem;
+	padding: 1px;
+}
+.floor_2-footer>div:nth-child(2) div:nth-of-type(2){
+	width: 0.96rem;
+	height: 0.8rem;
+	padding: 1px;
+}
+.floor_2-footer>div:nth-child(2) div:nth-of-type(3){
+	width: 0.96rem;
+	height: 0.8rem;
+	padding: 1px;
+}
+.adv{
+	width: 100%;
+	height: 0.64rem;
+	padding: 1px;
+}
+.twoColumn{
+	width: 100%;
+	background:#E9E9E9;
+	padding-left: 2%;
+}
+.twoColumn li{
+	float: left;
+    background: #FFFFFF;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    width: 48%;
+    height: 1.9rem;
+}
+.picWrapper{
+	width: 1.2rem;
+	height: 1.2rem;
+}
+.twoColumn_txt{
+	width: 100%;
+    color: #999;
+    height: 32px;
+}
+.discount{
+	width: 1.25rem;
+	height: 0.2rem;
+}
+.discount i{
+	color: #fff;
+	background: rgb(250, 131, 34);
+	border-radius: 2px;
+	padding: 2;
+}
+.price strong {
+	color: #ac2023;
+	margin-right: 8px;
+	font-weight: 600;
+}
+.price del{
+	color: #999;
+	font-size: 12px;
 }
 </style>

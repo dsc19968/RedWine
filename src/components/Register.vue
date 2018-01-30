@@ -3,9 +3,9 @@
   	<!--head区-->
   	<header>
   		<div class="head">
-  			<a href="#" class="icon l">
+  			<router-link to="/login" class="icon l">
   				<i>></i>
-  			</a>
+  			</router-link>
   			<h3 class="l">注册</h3>
   		</div>
   	</header>

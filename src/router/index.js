@@ -5,6 +5,7 @@ import Variety from '@/components/Variety'
 import Cart from '@/components/Cart'
 import Self from '@/components/Self'
 import Register from '@/components/Register'
+import Login from '@/components/Login'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/register',
       name: 'Register',
       component: Register
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
     }
   ]
 })

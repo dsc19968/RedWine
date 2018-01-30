@@ -3,18 +3,26 @@
   	<!--head区-->
   	<header>
   		<div class="head">
-  			<a href="#" class="icon l"><i class="iconfont icon-wode"></i></a>
+  			<router-link to="/login" class="icon l">
+  				<i class="iconfont icon-wode"></i>
+  			</router-link>
   			<h3 class="l">我的信息</h3>
-  			<a href="#" class="icon l message" ><i class="iconfont icon-xiaoxi"></i></a>
+  			<router-link to="/login" class="icon l message" >
+  				<i class="iconfont icon-xiaoxi"></i>
+  			</router-link>
   		</div>
   	</header>
   	<!--登录注册-->
+  	
   	<div class="lr_area">
-  		<span class="circle">
-  			<i class="iconfont icon-wode"></i>
-  			<b>登录/注册</b>
-  		</span>
+  		<router-link to="/login">
+	  		<span class="circle">
+	  			<i class="iconfont icon-wode"></i>
+	  			<b>登录/注册</b>
+	  		</span>
+  		</router-link>
   	</div>
+  	</rooter-link>
   	<!--收藏累计区-->
   	<div class="count_area">
   		<div class="collect">
