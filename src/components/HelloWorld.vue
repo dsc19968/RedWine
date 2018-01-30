@@ -174,17 +174,19 @@
 		<!--5lou-->
 		<ul class="twoColumn">
 			<li v-for="item in info">
-				<div class="picWrapper">
-					<img :src="'http://img0.gjw.com' + item.图片路径"/>
-				</div>
-				<p class="twoColumn_txt">{{item.品名}}</p>
-				<div class="discount">
-					<i>{{item.优惠条件}}</i>
-				</div>
-				<div class="price">
-					<strong>￥<i>{{item.本站价}}</i></strong>
-					<del>￥<i>{{item.市场价}}</i></del>
-				</div>
+				<router-link :to="{name:'Detail',params:{fid:item.id}}">
+					<div class="picWrapper">
+						<img :src="'http://img0.gjw.com' + item.图片路径"/>
+					</div>
+					<p class="twoColumn_txt">{{item.品名}}</p>
+					<div class="discount">
+						<i>{{item.优惠条件}}</i>
+					</div>
+					<div class="price">
+						<strong>￥<i>{{item.本站价}}</i></strong>
+						<del>￥<i>{{item.市场价}}</i></del>
+					</div>
+				</router-link>
 			</li>
 		</ul>
 	</div>
@@ -450,6 +452,7 @@ img{
 .picWrapper{
 	width: 1.2rem;
 	height: 1.2rem;
+	margin-left: 15px;
 }
 .twoColumn_txt{
 	width: 100%;
