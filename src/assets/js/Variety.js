@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import axios from 'axios';
-import Jquery from 'jquery';
+import $ from 'jquery';
 export default {
   name: 'Variety',
   data () {
@@ -25,6 +25,12 @@ export default {
     }
   },
   mounted(){
+      //选项卡切换
+      $("section ul li").click(function(){
+          $(this).addClass("hover").siblings().removeClass('hover');
+          $("section .content dl").eq($(this).index()).show().siblings().hide();
+      });
+
   	axios.get("/SER/GetFenleiAdvert")
   	.then((res)=>{
   		//console.log(res);
@@ -71,7 +77,7 @@ export default {
     });
     axios.get("/SER/GetAllTypeBandAndAttr?c_no=酒具周边")
     .then((res7)=>{
-        console.log(JSON.parse(res7.data.info));
+        //console.log(JSON.parse(res7.data.info));
         this.list17 = JSON.parse(res7.data.info).品牌_1;
     })
   },

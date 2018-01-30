@@ -1,5 +1,5 @@
 <template>
-  <div class="variety">
+  <div id="variety">
   	<!-- *******header******* -->
 	<header>
 		<div class="search">
@@ -10,9 +10,8 @@
 	
 	<!-- *******section******* -->
 	<section>
-		<!-- *******白酒******* -->
 			<ul>
-				<li>白酒</li>
+				<li class="hover">白酒</li>
 				<li>葡萄酒</li>
 				<li>洋酒</li>
 				<li>黄/啤</li>
@@ -20,8 +19,9 @@
 				<li>酒具周边</li>
 			</ul>
 
+			<!-- *******白酒******* -->
 			<div class="content">
-				<!-- <dl class="c_content_01">	
+				<dl class="c_content_01 show">	
 					<dt class="ad">
 						<div class="swiper-container">
 						  <div class="swiper-wrapper">
@@ -76,11 +76,11 @@
 							</li>
 						</ol>
 					</dd>
-				</dl> -->
+				</dl>
 
 
 				<!-- *******葡萄酒******* -->
-				<!-- <dl class="c_content_02">	
+				<dl class="c_content_02">	
 					<dt class="ad">
 						<div class="swiper-container">
 						  <div class="swiper-wrapper">
@@ -135,10 +135,10 @@
 							</li>
 						</ol>
 					</dd>
-				</dl> -->
+				</dl>
 
 				<!-- *******洋酒******* -->
-				<!-- <dl class="c_content_03">	
+				<dl class="c_content_03">	
 					<dt class="ad">
 						<div class="swiper-container">
 						  <div class="swiper-wrapper">
@@ -182,10 +182,10 @@
 							</li>
 						</ol>
 					</dd>
-				</dl> -->
+				</dl>
 
 				<!-- *******黄/啤******* -->
-				<!-- <dl class="c_content_04">	
+				<dl class="c_content_04">	
 					<dt class="ad">
 						<div class="swiper-container">
 						  <div class="swiper-wrapper">
@@ -219,10 +219,10 @@
 							</li>
 						</ol>
 					</dd>
-				</dl> -->
+				</dl>
 
 				<!-- *******清酒******* -->
-				<!-- <dl class="c_content_05">	
+				<dl class="c_content_05">	
 					<dt class="ad">
 						<div class="swiper-container">
 						  <div class="swiper-wrapper">
@@ -255,10 +255,10 @@
 							</li>
 						</ol>
 					</dd>
-				</dl> -->
+				</dl>
 
 				<!-- *******酒具周边******* -->
-				<dl class="c_content_05">	
+				<dl class="c_content_06">	
 					<dd class="spirit_brand">
 						<ol>
 							<li v-for="item17 in list17">
@@ -269,7 +269,6 @@
 					</dd>
 				</dl>
 			</div>
-
 
 	<!-- *******footer******* -->	
 	<common_footer></common_footer>
