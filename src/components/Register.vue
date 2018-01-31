@@ -19,7 +19,7 @@
   			<li class="clear phone">
   				<div class="phone_num">
 		  			<i class="iconfont icon-wode"></i>
-		  			<input type="text" placeholder="请输入手机号码">
+		  			<input type="text" placeholder="请输入手机号码" id="phone_num" v-model="username">
 	  			</div>
 	  			<div class="error">
 	  				<img src="../assets/images/gwc_guanbi.png">
@@ -28,7 +28,7 @@
   			<li class="clear code">
   				<div class="reg_code">
 		  			<i class="iconfont icon-wode"></i>
-		  			<input type="text" placeholder="请输入验证码">
+		  			<input type="text" placeholder="请输入验证码" disabled="disabled">
 	  			</div>
 	  			<div class="get_code">
 	  				<p>获取验证码</p>
@@ -37,7 +37,7 @@
   			<li class="clear pwd">
   				<div class="reg_pwd">
 		  			<i class="iconfont icon-wode"></i>
-		  			<input type="text" placeholder="请输入密码">
+		  			<input type="password" placeholder="请输入密码" id="reg_pwd" v-model="pwd">
 	  			</div>
 	  			<div class="pwd_pic">
 	  				<img src="../assets/images/dl_mima_off@2x.png" class="off">
@@ -47,7 +47,7 @@
   			<li class="clear pwd">
   				<div class="con_pwd">
 		  			<i class="iconfont icon-wode"></i>
-		  			<input type="text" placeholder="请输入密码">
+		  			<input type="password" placeholder="请输入确认密码" id="reg_conpwd">
 	  			</div>
 	  			<div class="con_pic">
 	  				<img src="../assets/images/dl_mima_off@2x.png" class="off">
@@ -71,16 +71,36 @@
 </template>
 
 <script>
+import $ from "jquery";
+import axios from 'axios';
+import qs from "qs";
 export default {
   name: 'Register',
   data () {
     return {
-      
+      username:"",
+      pwd:""
     }
+  },
+  mounted(){
+  	var that = this;
+  	$("#reg_btn").click(function(){
+  		axios.post("/api/register_ajax",qs.stringify({
+  			username:that.username,
+  			pwd:that.pwd
+  		}))
+  		.then(function(res){
+  			if(res.data.code == 1){
+  				alert(res.data.message);
+  				location.href = "/#/login";
+  			}else{
+  				alert(res.data.message);
+  			}
+	  	})
+  	})
   }
 }
-</script<!-- Add "scoped" attribute to limit CSS to this component only -->
->
+</script>
 
 <style scoped lang="scss" src="../assets/scss/Register.scss">
 
