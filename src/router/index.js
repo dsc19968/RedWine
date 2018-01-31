@@ -6,7 +6,6 @@ import Cart from '@/components/Cart'
 import Self from '@/components/Self'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
-import Detail from '@/components/Detail'
 
 Vue.use(Router)
 
@@ -42,11 +41,6 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
-    },
-    {
-      path: '/detail/:fid',
-      name: 'Detail',
-      component: Detail
     }
   ]
 })

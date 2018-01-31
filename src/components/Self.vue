@@ -100,8 +100,6 @@
   		</div>
   		<div class="blank"></div>
   	</section>
-    <!--footer-->
-    <common_footer></common_footer>
   </div>
 </template>
 
