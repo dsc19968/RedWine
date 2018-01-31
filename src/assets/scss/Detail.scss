@@ -1,0 +1,298 @@
+@import "../css/swiper.min.css";
+@import "../font2/iconfont2.css";
+#detail{
+	background:#eee;
+	height:100%;
+}
+.header{
+	width:100%;
+	height:0.42rem;
+	border-bottom:1px solid #ddd;
+	background:#fff;
+	display:flex;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:1000;
+	span{
+		margin-top:0.15rem;
+		display:block;
+		width:0.44rem;
+		height:0.42rem;
+		text-align:center;
+		font-size:16px;
+	}
+	ul{
+		height:100%;
+		width:45%;
+		line-height:0.42rem;
+		margin-left:11%;
+		font:600 14px/40px "microsoft yahei";
+		color:#666;
+		li{
+			float:left;
+			width:33.3%;
+			text-align:center;
+		}
+	}
+	b{
+		width:15%;
+		height:100%;
+		img{
+			width:0.14rem;
+			height:0.18rem;
+			margin:0.12rem 0 0 0.12rem;
+		}
+	}
+	i{
+		width:15%;
+		height:100%;
+		img{
+			width:0.17rem;
+			height:0.17rem;
+			margin:0.12rem 0 0 0.06rem;
+		}
+	}
+}
+.show{
+	display:block;
+}
+.hover{
+	border-bottom:2px solid #666;
+}
+ol{
+	width:100%;
+	height:100%;
+	margin-top:0.42rem;
+	overflow:hidden;
+	li{
+		width:100%;
+		height:100%;
+	}
+	.good{
+		.lunbo{
+			width:100%;
+			height:3rem;
+			background:#fff;
+			img{
+				width:80%;
+				height:80%;
+				margin:6% 0 0 10%;
+			}
+		}
+		.detail_info{
+			// width:94%;
+			padding:0 3%;
+			height:1.15rem;
+			background:#fff;
+			border-top:1px solid #ddd;
+			border-bottom:1px solid #ddd;
+			.info_name{
+				width:100%;
+				margin-top:0.1rem;
+				font:14px/16px "microsoft yahei";
+				color:#999;
+			}
+			.info_des{
+				margin-top:0.1rem;
+				width:100%;
+				font:14px/16px "microsoft yahei";
+				color:#CD0011;
+			}
+			.info_price{
+				margin-top:0.1rem;
+				font-size:12px;
+				color:#CD0011;
+			}
+			.info_promise{
+				width:100%;
+				margin-top:0.06rem;
+				color:#CD0011;
+				span{
+					font:16px/30px "microsoft yahei";
+				}
+				i{
+					font:12px/30px "microsoft yahei";
+					margin-left:5px;
+				}
+			}
+		}
+		.interval{
+			width:100%;
+			height:0.1rem;
+			background:#E9E9E9;
+		}
+		.buySelect{
+			width:100%;
+			padding:0 3%;
+			height:1.24rem;
+			background:#fff;
+			display:flex;
+			flex-direction:column;
+			border-top:1px solid #ddd;
+			border-botom:1px solid #ddd;
+			li{
+				height:0.41rem;
+				width:100%;
+				border-bottom:1px solid #ddd;
+			}
+			.amount{
+				width:100%;
+				display:flex;
+				.labelitem{
+					width:20%;
+					color:#666;
+					font:14px/40px "microsoft yahei";
+				}
+				.numcontrol{
+					display:flex;
+					width:80%;
+					padding:0.05rem 0;
+					.subtract{
+						border-right:1px solid #fff;
+						text-align:center;
+						color:#333;
+						font:14px/30px "microsoft yahei";
+						background:#E9E9E9;
+						width:0.4rem;
+					}
+					.numshow{
+						border-right:1px solid #fff;
+						text-align:center;
+						color:#333;
+						font:14px/30px "microsoft yahei";
+						background:#E9E9E9;
+						width:0.4rem;
+					}
+					.add{
+						text-align:center;
+						color:#333;
+						font:14px/30px "microsoft yahei";
+						background:#E9E9E9;
+						width:0.4rem;
+					}
+				}
+			}
+			.address{
+				width:100%;
+				display:flex;
+				.labelitem{
+					width:20%;
+					color:#666;
+					font:14px/40px "microsoft yahei";
+				}
+				.showcity{
+					width:60%;
+					font:14px/40px "microsoft yahei";
+				}
+				.status{
+					width:12%;
+					font:14px/40px "microsoft yahei";
+					color:#cd0011;
+				}
+				.more{
+					font-size:16px;
+					margin-top:0.13rem;
+					color:#ccc;
+				}
+			}
+			.warning{
+				width:100%;
+				display:flex;
+				.labelitem{
+					width:20%;
+					color:#666;
+					font:14px/40px "microsoft yahei";
+				}
+				.prompt{
+					width:80%;
+					color:#000;
+					font:14px/40px "microsoft yahei";
+				}
+			}
+		}
+	}
+}
+.detailbuy{
+	width:100%;
+	height:0.48rem;
+	display:flex;
+	position:fixed;
+	left:0;
+	bottom:0;
+	background:#fff;
+	margin-top:0.48rem;
+	.gouwuche{
+		width:21%;
+		text-align:center;
+		font:14px/24px "microsoft yahei";
+		color:#666;
+	}
+	.shoucang{
+		width:21%;
+		text-align:center;
+		font:14px/24px "microsoft yahei";
+		color:#666;
+	}
+	.addcart{
+		width:29%;
+		padding:0 2%;
+		height:100%;
+		line-height:0.48rem;
+		color:#fff;
+		background:#cd0011;
+		text-align:center;
+		font-size:14px;
+	}
+	.buynow{
+		width:29%;
+		background:#000;
+		color:#fff;
+		height:100%;
+		line-height:0.48rem;
+		text-align:center;
+		font-size:14px;
+	}
+}
+
+.mint-swipe-indicator is-active{
+	background:blue !important;
+}
+
+/*-----隐藏的nav-----*/
+.bottom{
+	position:fixed;
+	left:0;
+	top:0.42rem;
+	width:100%;
+	height:45px;
+	z-index:100;
+	background:#fff;
+}
+.bottom_nav{
+	width:100%;
+	height: 45px;
+	line-height: 45px;
+	font-size: 14px;
+	display: flex;
+	position:relative;
+}
+.bottom_nav:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 1px;
+	background: #000;
+	transform: scaleY(0.5);
+}
+.bottom_nav a{
+	flex: 1;
+	line-height: 25px;
+	text-align: center;
+}
+.bottom_nav a span{
+	width: 100%;
+	display: block;
+}

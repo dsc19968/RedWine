@@ -17,23 +17,23 @@
   			你可能喜欢
   		</div>
   		<!--可能喜欢-->
-  	<ul class="twoColumn">
-			<li v-for="item in like">
-				<router-link :to="{name:'Detail',params:{fid:item.id}}">
-					<div class="picWrapper">
-						<img :src="'http://img0.gjw.com' + item.图片路径"/>
-					</div>
-					<p class="twoColumn_txt">{{item.品名}}</p>
-					<div class="discount">
-						<i>{{item.优惠条件}}</i>
-					</div>
-					<div class="price">
-						<strong>￥<i>{{item.本站价}}</i></strong>
-						<del>￥<i>{{item.市场价}}</i></del>
-					</div>
-				</router-link>
-			</li>
-		</ul>
+	  	<ul class="twoColumn">
+				<li v-for="item in like">
+					<router-link :to="{name:'Detail',params:{fid:item.id}}">
+						<div class="picWrapper">
+							<img :src="'http://img0.gjw.com' + item.图片路径"/>
+						</div>
+						<p class="twoColumn_txt">{{item.品名}}</p>
+						<div class="discount">
+							<i>{{item.优惠条件}}</i>
+						</div>
+						<div class="price">
+							<strong>￥<i>{{item.本站价}}</i></strong>
+							<del>￥<i>{{item.市场价}}</i></del>
+						</div>
+					</router-link>
+				</li>
+			</ul>
   	</div>
     <common_footer></common_footer>
   </div>
