@@ -5,7 +5,7 @@
   		<h3>购物车</h3>
   		<div class="edit">编辑</div>
   	</div>
-  	<div class="cartEmpty">
+  	<div class="cartEmpty" v-if="flag">
   		<div class="goShoping">
   			<div><img src="../assets/images/wdsc_gwc.png"/></div>
   			<p>购物车空空如也</p>
@@ -35,6 +35,28 @@
 				</li>
 			</ul>
   	</div>
+  	<!--购物车功能-->
+  	<div class="cartList">
+			<ul>
+				<li class="list" v-for="item in $store.state.cart" >
+					<div class="list-left"><input type="checkbox"/></div>
+					<div class="list-right">
+						<div class="list-img">
+							<img :src="'http://img0.gjw.com' + item.图片路径"/>
+						</div>
+						<div class="list-info">
+							<p>{{item.品名}}</p>
+							<div>
+								<i class="price">￥{{item.市场价}}</i>
+								<div class="numController">
+									<span class="minus">-</span><input class="num" type="text" value="1" /><span class="add">+</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+  	</div>
     <common_footer></common_footer>
   </div>
 </template>
@@ -45,15 +67,20 @@ export default {
   name: 'Cart',
   data () {
     return {
-      like:[]
+      like:[],
+      flag:false
     }
   },
   mounted(){
+  	console.log(this.$store.state.cart)
 		axios.get('SER/GetHot?_index=1')
 				.then((res)=>{
 //					console.log(res.data.info)
 					this.like = JSON.parse(res.data.info);	
-				})
+				});
+		if(this.$store.state.cart.length == 0){
+			this.flag = true;
+		}
   }
 }
 </script>
@@ -180,5 +207,80 @@ h3{
 .price del{
 	color: #999;
 	font-size: 12px;
+}
+/*购物车列表*/
+.cartList{
+	width: 100%;
+	height: 100%;
+	padding-bottom: 92px;
+}
+.list{
+	width: 100%;
+	height: 1.01rem;
+	padding: 10px;
+	background: #fff;
+}
+.list-left{
+	width: 30px;
+	height: 0.8rem;
+	text-align: center;
+	float: left;
+}
+.list-left input{
+	width: 16px;
+	height: 16px;
+	border-radius: 16px;
+	border-radius: 50%;
+	margin-top: 32px;
+}
+.list-right{
+	width: 2.7rem;
+	height: 0.8rem;
+	float: left;
+}
+.list-img{
+	width: 0.8rem;
+	height: 0.8rem;
+	float: left;
+}
+.list-img img{
+	width: 100%;
+	height: 100%;
+}
+.list-info{
+	width: 1.9rem;
+	height: 0.8rem;
+	float: left;
+}
+.list-info>p{
+	width: 1.9rem;
+	height: 0.28rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.list-info>div{
+	width: 1.9rem;
+	height: 0.52rem;
+}
+.price{
+	color: red;
+}
+.numController{
+	width: 0.9rem;
+	height: 0.48rem;
+	float: right;
+	padding-top: 15px;
+}
+.num{
+	width: 38px;
+	height: 18px;
+	text-align: center;
+}
+.minus,.add{
+	display: inline-block;
+	width: 25px;
+	height: 18px;
+	background: #eee;
+	text-align: center;
 }
 </style>

@@ -71,7 +71,7 @@
          <div class="iconfont">&#xe602;</div>
          <p>收藏</p>
        </li>
-       <li class="addcart">加入购物车</li>
+       <li class="addcart" @click="addToCart(detail)">加入购物车</li>
        <li class="buynow">立即购买</li>
      </ul>
 	</div>

@@ -22,8 +22,8 @@ export default {
   	var id = this.$route.params.fid;
   	axios.get(`/SER/GetkillGoods?user_id=290591&bh=${id}`)
   	.then((res)=>{
-    console.log(res);
-    console.log(res.data.info);
+//  console.log(res);
+//  console.log(res.data.info);
 		var str = res.data.info;
     var str2 = res.data.imgs;
     this.imgs = JSON.parse(str2);
@@ -37,8 +37,15 @@ export default {
       this.showFlag = !this.showFlag;
     },
     goback:function(){
-      window.history.go(-1);
-    }
+      window.history.go(-1)
+    },
+	  addToCart:function(){
+		//启动action
+		//dispatch("action的名字")
+		this.$store.dispatch("addToCart",this.detail);
+		alert("添加成功");
+		console.log(this.detail)
+		}
   }
 }
 
