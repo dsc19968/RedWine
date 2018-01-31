@@ -72,7 +72,7 @@ export default {
     }
   },
   mounted(){
-  	console.log(this.$store.state.cart)
+//	console.log(this.$store.state.cart)
 		axios.get('SER/GetHot?_index=1')
 				.then((res)=>{
 //					console.log(res.data.info)
