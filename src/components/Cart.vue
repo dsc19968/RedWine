@@ -5,11 +5,6 @@
   		<h3>购物车</h3>
   		<div class="edit">编辑</div>
   	</div>
-  	<div class="cartEmpty">
-  		<div class="goShoping">
-  			<div><img src="../assets/images/wdsc_gwc.png"/></div>
-  		</div>
-  	</div>
     <common_footer></common_footer>
   </div>
 </template>
@@ -54,23 +49,5 @@ h3{
 	font-size: 14px;
 	color: #9F9F9F;
 	margin-right: 15px;
-}
-/*没有商品时*/
-.cartEmpty{
-	width: 100%;
-	height: 100%;
-}
-.goShoping{
-	width: 100%;
-	height: 2.4rem;
-	background: red;
-}
-.goShoping div:nth-child(1){
-	width: 100%;
-	height: 54px;
-}
-.goShoping div:nth-child(1) img{
-	width: 50px;
-	height: 50px;
 }
 </style>

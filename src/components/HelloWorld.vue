@@ -12,7 +12,7 @@
 			  <mt-swipe-item v-for="item in list">
 	        <img :src="item" />
 	      </mt-swipe-item>
-			</mt-swipe>
+		</mt-swipe>
   	</div>
   	<!--导航-->
   	<div class="nav">
