@@ -257,11 +257,11 @@ export default {
 				let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 //				document.title = document.body.scrollHeight + ":" + (scrollTop + clientHeight);
 				if((scrollTop + clientHeight) >= document.body.scrollHeight * 0.8){
-					Toast({
-					  message: '玩命加载中',
-					  position: 'middle',
-					  duration: 500
-					});
+//					Toast({
+//					  message: '玩命加载中',
+//					  position: 'middle',
+//					  duration: 500
+//					});
 					that.getData();
 //					console.log(that);
 				}
