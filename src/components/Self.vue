@@ -126,6 +126,9 @@ export default {
   		this.flag = false;
   		this.flag2 = true;
   	}
+    $("#exit").click(function(){
+      location.href = "/#/login";
+    })
   }
 }
 </script>
