@@ -40,7 +40,7 @@ export default {
     axios.get("/SER/GetAllTypeBandAndAttr?c_no=白酒")
     .then((res2)=>{
         //console.log(res2);
-        //console.log(res2.data.info);
+        //console.log(typeof(res2.data.info));
        //console.log((JSON.parse(res2.data.info).品牌_1).splice(0,9));
         this.list2 = (JSON.parse(res2.data.info).品牌_1).splice(0,9);
         //console.log(JSON.parse(res2.data.info));
