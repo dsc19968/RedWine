@@ -3,7 +3,7 @@
   	<!--head区-->
   	<header>
   		<div class="head">
-  			<router-link to="/login" class="icon l">
+  			<router-link to="/" class="icon l">
   				<i class="iconfont icon-wode"></i>
   			</router-link>
   			<h3 class="l">我的信息</h3>
@@ -13,7 +13,7 @@
   		</div>
   	</header>
   	<!--登录注册-->
-  	<div class="lr_area">
+  	<div class="lr_area" v-if="flag">
   		<router-link to="/login">
 	  		<span class="circle">
 	  			<i class="iconfont icon-wode"></i>
@@ -21,10 +21,10 @@
 	  		</span>
   		</router-link>
   	</div>
-  	<div class="lr_area2">
+  	<div class="lr_area2" v-if="flag2">
 	  		<span class="circle2"></span>
 	  		<div class="userinfo">
-	  			<i>用户名：</i>
+	  			<i>用户名：{{$store.state.username}}</i>
 	  			<b>会员称号：普通会员</b>
 	  		</div>
   	</div>
@@ -103,18 +103,29 @@
   				<span>></span>
   			</div>
   		</div>
-  		<div class="blank"></div>
+  		<div class="blank">
+  			<button class="exit" id="exit">退出</button>
+  		</div>
   	</section>
   </div>
 </template>
 
 <script>
+import $ from "jquery"
 export default {
   name: 'Self',
   data () {
     return {
-      
+      flag: true,
+      flag2: false
     }
+  },
+  mounted(){
+  	console.log(this.$store.state);
+  	if(this.username != ""){
+  		this.flag = false;
+  		this.flag2 = true;
+  	}
   }
 }
 </script>

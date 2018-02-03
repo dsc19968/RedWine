@@ -4,7 +4,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 var state = {
-	username :"用户1",
+	username :"",
 	cart:[]
 }
 
@@ -18,6 +18,7 @@ function saveTolocal(state){
 	//持久化保存数据
 	localStorage.setItem("data",JSON.stringify(state));
 }
+
 
 const mutations = {
 	setUserName:function(state,username){

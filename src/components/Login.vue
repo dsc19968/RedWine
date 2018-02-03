@@ -76,6 +76,7 @@ export default {
   			if(that.username != "" && res.data.codeStaus == 1 ){
   				alert(res.data.message);
   				location.href = "/#/self";
+  				that.$store.dispatch("setUserNameA",that.username);
   			}else{
   				alert(res.data.message);
   			}

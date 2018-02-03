@@ -57,7 +57,6 @@
     height: 125px;
     background: #ca0286;
     position: relative;
-    display: none;
     .circle2{
         display: block;
         width: 75px;
@@ -277,6 +276,16 @@ section{
         height: 85px;
         width: 100%;
         background: #fff;
+        .exit{
+            width: 340px;
+            height: 45px;
+            background: #cd0011;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-left: 23px;
+        }
     }
 }
 
