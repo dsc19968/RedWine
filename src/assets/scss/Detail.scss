@@ -15,7 +15,7 @@
 	left:0;
 	z-index:1000;
 	span{
-		margin-top:0.15rem;
+		padding-top:0.15rem;
 		display:block;
 		width:0.44rem;
 		height:0.42rem;
@@ -60,20 +60,25 @@
 .hover{
 	border-bottom:2px solid #666;
 }
-ol{
+.main{
 	width:100%;
-	height:100%;
-	margin-top:0.42rem;
 	overflow:hidden;
-	li{
-		width:100%;
-		height:100%;
+	margin-top:0.42rem;
+	margin-bottom:0.48rem;
+	.chance{
+		display:none;
+	}
+	.show{
+		display: block;
 	}
 	.good{
+		width:100%;
+		height:100%;
 		.lunbo{
 			width:100%;
 			height:3rem;
 			background:#fff;
+			z-index:100000;
 			img{
 				width:80%;
 				height:80%;
@@ -81,9 +86,8 @@ ol{
 			}
 		}
 		.detail_info{
-			// width:94%;
 			padding:0 3%;
-			height:1.15rem;
+			height:1.3rem;
 			background:#fff;
 			border-top:1px solid #ddd;
 			border-bottom:1px solid #ddd;
@@ -130,7 +134,7 @@ ol{
 			display:flex;
 			flex-direction:column;
 			border-top:1px solid #ddd;
-			border-botom:1px solid #ddd;
+			border-bottom:1px solid #ddd;
 			li{
 				height:0.41rem;
 				width:100%;
@@ -212,7 +216,121 @@ ol{
 			}
 		}
 	}
+	.careful{
+		width:100%;
+		margin:0.04rem;
+		.careful_pic{
+			width:304px;
+			height:304px;
+			img{
+				width:304px;
+				height:304px;
+			}
+		}
+	}
+	.commond{
+		width:100%;
+		height:100%;
+		.comview{
+			width:100%;
+			height:100%;
+			display:flex;
+			flex-direction:column;
+			position:relative;
+			.comhead{
+				width:100%;
+				height:0.49rem;
+				border-bottom:1px solid #ddd;
+				background:#fff;
+				/*position:fixed;
+				left:0;
+				top:0;
+				z-index:100;*/
+				dl{
+					display:flex;
+					width:100%;
+					height:100%;
+					dd{
+						width:20%;
+						height:100%;
+						text-align:center;
+						padding-top:0.04rem;
+						h4{
+							color:#666;
+							font:14px/20px "microsoft yahei";
+						}
+						p{
+							color:#666;
+							font:14px/20px "microsoft yahei";
+						}
+					}
+				}
+			}
+			.combody{
+				width:100%;
+				flex:1;
+				/*margin-top:0.49rem;*/
+				height:100%;
+				ol{
+					width:100%;
+					height:100%;
+					margin-top:0;
+					.allcontent{
+						height:100%;
+						ul{
+							li{
+								background: #fff;
+								border-bottom:1px solid #ddd;
+								padding-left:0.1rem;
+								.commessage{
+									width:100%;
+									padding:0.06rem 0;
+									span{
+										font:12px/13px "microsoft yahei";
+										/*margin-left:0.25rem;*/
+										color:#666;
+										margin-right:4%;
+									}
+									i{
+										font:12px/12px "microsoft yahei";
+										color:#fff;
+										background:#e58b16;
+										border-radius:0.02rem;
+									}
+									b{
+										font:12px/12px "microsoft yahei";
+										color:#999;
+										margin-right:0.05rem;
+										float:right;
+									}
+								}
+								.star{
+									width:100%;
+									height:0.2rem;
+									margin-left:-0.1rem;
+									li{
+										float:left;
+										border:none;
+									}
+								}
+								h5{
+									width:100%;
+									margin:0.04rem 0;
+									font:12px/14px "microsoft yahei";
+								}
+								.compic{
+									width:100%;
+									height:0.8rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
+
 .detailbuy{
 	width:100%;
 	height:0.48rem;
@@ -221,7 +339,6 @@ ol{
 	left:0;
 	bottom:0;
 	background:#fff;
-	margin-top:0.48rem;
 	.gouwuche{
 		width:21%;
 		text-align:center;

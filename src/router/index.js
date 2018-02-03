@@ -21,27 +21,27 @@ export default new Router({
     {
       path: '/variety',
       name: 'Variety',
-      component: Variety
+      component: () => import('@/components/Variety')
     },
     {
       path: '/cart',
       name: 'Cart',
-      component: Cart
+      component: () => import('@/components/Cart')
     },
     {
       path: '/self',
       name: 'Self',
-      component: Self
+      component: () => import('@/components/Self')
     },
     {
       path: '/register',
       name: 'Register',
-      component: Register
+      component: () => import('@/components/Register')
     },
     {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: () => import('@/components/Login')
     },
     {
       path: '/detail/:fid',

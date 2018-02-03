@@ -16,7 +16,7 @@
         <common_footer></common_footer>
     </nav>
 
-    <!-- ************ -->
+    <!-- ******body****** -->
     <ol class="main">
       <li class="good show chance">
         <div class="lunbo">
@@ -59,8 +59,55 @@
          </ul>
          <div class="interval"></div>
       </li>
-      <li class="careful chance">2</li>
-      <li class="commond chance">3</li>
+      <!-- *******详情******* -->
+      <li class="careful chance">
+        <p class="careful_pic" v-for="item in imgs">
+            <img :src="'http://img0.gjw.com' + item.图片路径"/>
+        </p>   
+      </li>
+
+      <!-- *******评价******* -->
+      <li class="commond chance">
+        <ul class="comview">
+          <li class="comhead">
+            <dl v-for="item2 in list2">
+              <dd class="comall hover2"><h4>全部</h4><p>{{list1.total_num}}</p></dd>
+              <dd class="comgood"><h4>好评</h4><p>{{item2.satisfied_num}}</p></dd>
+              <dd class="commedium"><h4>中评</h4><p>{{item2.general_num}}</p></dd>
+              <dd class="comsmall"><h4>差评</h4><p>{{item2.unsatisfied_num}}</p></dd>
+              <dd class="comall"><h4>晒图</h4><p>{{item2.sunnum}}</p></dd>
+            </dl>
+          </li>
+          <li class="combody">
+            <ol>
+              <!-- 全部评价 -->
+              <li class="allcontent show2 active">
+                <ul>
+                  <li v-for="item in list">
+                    <p class="commessage"><span>{{item.UserName}}</span><i>{{item.LevelName}}</i><b>{{item.CreateTime}}</b></p>
+                    <ul class="star">
+                      <li>
+                        <img src="../assets/images/star.png" height="16" width="16"/>
+                        <img src="../assets/images/star.png" height="16" width="16"/>
+                        <img src="../assets/images/star.png" height="16" width="16"/>
+                        <img src="../assets/images/star.png" height="16" width="16"/>
+                        <img src="../assets/images/star.png" height="16" width="16"/>
+                      </li> 
+                    </ul>
+                    <h5>{{item.Content}}</h5>
+                    <div class="compic" v-if="item.img_path"><img width="80" height="80" :src="'http://img0.gjw.com/Show/' + item.img_path"/></div>
+                  </li>
+                </ul>
+              </li>
+              <!-- 好评 -->
+              <!-- <li class="goodcontent active">good</li>
+              <li class="medcontent active">medium</li>
+              <li class="smallcontent active">small</li>
+              <li class="piccontent active">picture</li> -->
+            </ol>
+          </li>
+        </ul>
+      </li>
     </ol>
 		<ul class="detailbuy">
        <li class="gouwuche">

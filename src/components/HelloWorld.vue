@@ -173,7 +173,7 @@
 		</div>
 		<!--5lou-->
 		<ul class="twoColumn">
-			<li v-for="item in info">
+			<li v-for="(item,index) in info">
 				<router-link :to="{name:'Detail',params:{fid:item.id}}">
 					<div class="picWrapper">
 						<img :src="'http://img0.gjw.com' + item.图片路径"/>
@@ -196,7 +196,8 @@
 </template>
 
 <script>
-import axios from 'axios'; 
+import axios from 'axios';
+import { Toast } from 'mint-ui';
 export default {
   name: 'HelloWorld',
   data () {
@@ -256,6 +257,11 @@ export default {
 				let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 //				document.title = document.body.scrollHeight + ":" + (scrollTop + clientHeight);
 				if((scrollTop + clientHeight) >= document.body.scrollHeight * 0.8){
+//					Toast({
+//					  message: '玩命加载中',
+//					  position: 'middle',
+//					  duration: 500
+//					});
 					that.getData();
 //					console.log(that);
 				}
