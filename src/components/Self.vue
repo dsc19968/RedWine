@@ -13,7 +13,6 @@
   		</div>
   	</header>
   	<!--登录注册-->
-  	
   	<div class="lr_area">
   		<router-link to="/login">
 	  		<span class="circle">
@@ -22,7 +21,13 @@
 	  		</span>
   		</router-link>
   	</div>
-  	</rooter-link>
+  	<div class="lr_area2">
+	  		<span class="circle2"></span>
+	  		<div class="userinfo">
+	  			<i>用户名：</i>
+	  			<b>会员称号：普通会员</b>
+	  		</div>
+  	</div>
   	<!--收藏累计区-->
   	<div class="count_area">
   		<div class="collect">
@@ -100,8 +105,6 @@
   		</div>
   		<div class="blank"></div>
   	</section>
-    <!--footer-->
-    <common_footer></common_footer>
   </div>
 </template>
 

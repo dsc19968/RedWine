@@ -52,6 +52,33 @@
         }
     }
 }
+.lr_area2{
+    width: 100%;
+    height: 125px;
+    background: #ca0286;
+    position: relative;
+    display: none;
+    .circle2{
+        display: block;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background: url(../images/1.jpg) center center;
+        position: absolute;
+        left: 20px;
+        top: 16px;
+        text-align: center;
+    }
+    .userinfo{
+        padding-left: 120px;
+        padding-top: 35px;
+        color: #fff;
+        >i{
+            display: block;
+            padding-bottom: 6px;
+        }
+    }
+}
 .count_area{
     width: 100%;
     height: 52px;

@@ -1,7 +1,6 @@
 .register{
     background: #fff;
     .head{
-        width: 100%;
         height: 42px;
         border-bottom: 1px solid #ddd;
         >a{
@@ -35,13 +34,12 @@
         height: 215px;
         >ul{
             .clear{
-                width: 100%;
                 height: 54px;
                 border-bottom: 1px solid #ddd;
                 display: flex;
-                margin-left: 23px;
+                padding-left: 23px;
                 >.phone_num{
-                    width: 65%;
+                    width: 45%;
                     flex: 1;
                     >i{
                         width: 10%;
@@ -160,7 +158,7 @@
             width: 100%;
             height: 73px;
             line-height: 73px;
-            margin-left: 23px;
+            padding-left: 23px;
             >input{
                 vertical-align: middle;
                 
@@ -174,7 +172,7 @@
         }
         .regbtn{
             width: 100%;
-            margin-left: 23px;
+            padding-left: 23px;
             .reg_btn{
                 width: 340px;
                 height: 45px;

@@ -16,7 +16,11 @@
         <common_footer></common_footer>
     </nav>
 
+<<<<<<< HEAD
     <!-- ******body****** -->
+=======
+    <!-- ************ -->
+>>>>>>> 5e6c79b51c1aaf3015f27083c58e1b56d78e225a
     <ol class="main">
       <li class="good show chance">
         <div class="lunbo">
@@ -59,6 +63,7 @@
          </ul>
          <div class="interval"></div>
       </li>
+<<<<<<< HEAD
       <!-- *******详情******* -->
       <li class="careful chance">
         <p class="careful_pic" v-for="item in imgs">
@@ -108,6 +113,10 @@
           </li>
         </ul>
       </li>
+=======
+      <li class="careful chance">2</li>
+      <li class="commond chance">3</li>
+>>>>>>> 5e6c79b51c1aaf3015f27083c58e1b56d78e225a
     </ol>
 		<ul class="detailbuy">
        <li class="gouwuche">
@@ -118,7 +127,11 @@
          <div class="iconfont">&#xe602;</div>
          <p>收藏</p>
        </li>
+<<<<<<< HEAD
        <li class="addcart">加入购物车</li>
+=======
+       <li class="addcart" @click="addToCart(detail)">加入购物车</li>
+>>>>>>> 5e6c79b51c1aaf3015f27083c58e1b56d78e225a
        <li class="buynow">立即购买</li>
      </ul>
 	</div>

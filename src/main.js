@@ -6,6 +6,7 @@ import router from './router'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import Footer from './components/common_Footer'
+import store from './vuex'
 
 Vue.use(MintUI)
 
@@ -18,6 +19,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

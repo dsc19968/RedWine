@@ -7,18 +7,23 @@ export default {
     return {
       showFlag:false,
       detail:{},
+<<<<<<< HEAD
       imgs:[],
       list:[],
       list1:[],
       list2:[],
       time:[],
       page:0  
+=======
+      imgs:[]
+>>>>>>> 5e6c79b51c1aaf3015f27083c58e1b56d78e225a
     }
   },
   mounted(){
     //选项卡
     $("#detail .daohang li").click(function(){
         $(this).addClass("hover").siblings().removeClass('hover');
+<<<<<<< HEAD
         $("#detail .main .chance").eq($(this).index()).show().addClass("show").siblings().removeClass("show").hide();
     });
 
@@ -27,12 +32,17 @@ export default {
       $(this).addClass("hover2").siblings().removeClass('hover2');
       $(".comview .combody .active").eq($(this).index()).show().addClass("show2").siblings().removeClass("show2").hide();
     })
+=======
+        $("#detail .main .chance").eq($(this).index()).show().siblings().hide();
+    });
+>>>>>>> 5e6c79b51c1aaf3015f27083c58e1b56d78e225a
    
 
   	//console.log(this.$route.params.fid)
   	var id = this.$route.params.fid;
   	axios.get(`/SER/GetkillGoods?user_id=290591&bh=${id}`)
   	.then((res)=>{
+<<<<<<< HEAD
     //console.log(res);
     //console.log(res.data.info);
 		var str = res.data.info;
@@ -71,14 +81,37 @@ export default {
         //console.log(typeof(res3.data.data));
         this.list2 = res3.data.data;
     })
+=======
+//  console.log(res);
+//  console.log(res.data.info);
+		var str = res.data.info;
+    var str2 = res.data.imgs;
+    this.imgs = JSON.parse(str2);
+    //console.log(str2);
+		//console.log(JSON.parse(string)[0])
+  		this.detail = JSON.parse(str)[0];
+  	})
+>>>>>>> 5e6c79b51c1aaf3015f27083c58e1b56d78e225a
   },
   methods:{
     showNav:function(){
       this.showFlag = !this.showFlag;
     },
     goback:function(){
+<<<<<<< HEAD
       window.history.go(-1);
     }
+=======
+      window.history.go(-1)
+    },
+	  addToCart:function(){
+		//启动action
+		//dispatch("action的名字")
+		this.$store.dispatch("addToCart",this.detail);
+		alert("添加成功");
+		console.log(this.detail)
+		}
+>>>>>>> 5e6c79b51c1aaf3015f27083c58e1b56d78e225a
   }
 }
 
