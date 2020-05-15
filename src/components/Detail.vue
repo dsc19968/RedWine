@@ -6,7 +6,7 @@
       <span class="direct" @click="goback()">&lt;</span>
       <ul class="daohang">
         <li class="hover">商品</li>
-        <li>详情</li>
+        <li>详情666</li>
         <li>评价</li>
       </ul>
       <b><img src="../assets/images/foot.png"/></b>
